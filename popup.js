@@ -98,20 +98,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const newTopicInput = document.getElementById('new-topic-input');
     const newTopicName = newTopicInput.value.trim();
 
+    // Check if the topic name already exists
+    const isDuplicate = topics.some(topic => topic.name.toLowerCase() === newTopicName.toLowerCase());
+
     if (newTopicName) {
-      const newTopicKey = newTopicName.toLowerCase().replace(/\s+/g, '-');
-      const newTopic = { id: newTopicKey, name: newTopicName, key: newTopicKey };
+      if (isDuplicate) {
+        alert('Topic with the same name already exists. Please enter a different name.');
+      } else {
+        const newTopicKey = newTopicName.toLowerCase().replace(/\s+/g, '-');
+        const newTopic = { id: newTopicKey, name: newTopicName, key: newTopicKey };
 
-      topics.push(newTopic);
+        // Add new topic to the topics array
+        topics.push(newTopic);
 
-      localStorage.setItem(newTopic.key, 0);
+        // Initialize the counter for the new topic in localStorage
+        localStorage.setItem(newTopic.key, 0);
 
-      saveTopics();
+        // Save the updated topics list
+        saveTopics();
 
-      updateAndReorderButtons();
+        // Update the UI
+        updateAndReorderButtons();
 
-      
-      newTopicInput.value = '';
+        // Clear the input field
+        newTopicInput.value = '';
+      }
     }
   });
 
