@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 10px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  box-shadow: 8px 8px 16px #bebebe, 
+              -8px -8px 16px #ffffff;
+  border-radius: 15px;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+.topic-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove-button {
+  width: 70px;
+  padding: 7px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  background-color: #ff6b6b;
+  color: #fff;
+  transition: all 0.6s ease;
+  box-shadow: 8px 8px 16px #bebebe, 
+              -8px -8px 16px #ffffff;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+
+.remove-button:hover {
+  background-color: #ff4c4c;
+}
+.remove-button.disabled {
+  background-color: #80669d; 
+  color: #ffffff;
+}
+.remove-button.disabled:hover{
+  background-color: #3f94da;
+  color: rgb(255, 255, 255);
+}
+
+
+.increment-button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  box-shadow: 8px 8px 16px #bebebe, 
+              -8px -8px 16px #ffffff;
+  background-color: #e0e0e0;
+  color: #333;
+  transition: background-color 0.6s ease, transform 0.1s ease;
+}
+
+.increment-button:hover{
+  background-color: greenyellow;
+}
+
+.increment-button:active {
+  background-color: lawngreen;
+  transform: scale(0.95);
+}
+
+.remove-button:active {
+  transition: all 0.6s ease-in-out, transform 0.2s ease;
+  transform: scale(0.95);
+}
+
+#total-counter {
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  box-shadow: inset 4px 4px 8px #bebebe, 
+              inset -4px -4px 8px #ffffff;
+  border-radius: 15px;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.new-topic-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#new-topic-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-right: 10px;
+  box-shadow: inset 4px 4px 8px #bebebe, 
+              inset -4px -4px 8px #ffffff;
+  background-color: #e0e0e0;
+}
+
+#add-topic-button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  box-shadow: 8px 8px 16px #bebebe, 
+              -8px -8px 16px #ffffff;
+}
+
+#add-topic-button:hover {
+  background-color: #45a049;
+}
+
+
+.edit-button, .delete-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px #bebebe, 
+              -4px -4px 8px #ffffff;
+}
+
+.edit-button {
+  background-color: #ffc107; 
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545; 
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333; 
+}
+
+.edit-button:active, .delete-button:active {
+  transition: all 0.6s ease-in-out, transform 0.2s ease;
+  transform: scale(0.95);
+}
