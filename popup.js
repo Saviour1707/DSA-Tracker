@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       buttonContainer.classList.add('button-container');
 
       const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
+      removeButton.textContent = 'Reduce';
       removeButton.classList.add('remove-button');
       if (count === 0) {
         removeButton.classList.add('disabled'); 
