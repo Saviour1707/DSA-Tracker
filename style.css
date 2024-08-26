@@ -2,10 +2,12 @@ body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   padding: 10px;
+  width: 600px; 
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+
 }
 
 h2 {
@@ -16,8 +18,8 @@ h2 {
   color: #333;
   text-align: center;
   width: 100%;
-  box-shadow: 8px 8px 16px #bebebe, 
-              -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+              
   border-radius: 15px;
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   text-shadow: 1px 1px 2px #ffffff;
@@ -45,8 +47,8 @@ h2 {
   background-color: #ff6b6b;
   color: #fff;
   transition: all 0.6s ease;
-  box-shadow: 8px 8px 16px #bebebe, 
-              -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+              
   text-shadow: 1px 1px 2px #ffffff;
 }
 
@@ -71,8 +73,8 @@ h2 {
   border: none;
   border-radius: 15px;
   font-size: 16px;
-  box-shadow: 8px 8px 16px #bebebe, 
-              -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+              
   background-color: #e0e0e0;
   color: #333;
   transition: background-color 0.6s ease, transform 0.1s ease;
@@ -96,8 +98,8 @@ h2 {
   font-weight: bold;
   color: #333;
   padding: 10px;
-  box-shadow: inset 4px 4px 8px #bebebe, 
-              inset -4px -4px 8px #ffffff;
+  box-shadow: inset 4px 4px 8px #bebebe,  inset -4px -4px 8px #ffffff;
+             
   border-radius: 15px;
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
 }
@@ -114,8 +116,8 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 15px;
   margin-right: 10px;
-  box-shadow: inset 4px 4px 8px #bebebe, 
-              inset -4px -4px 8px #ffffff;
+  box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+              
   background-color: #e0e0e0;
 }
 
@@ -126,9 +128,10 @@ h2 {
   border-radius: 15px;
   background-color: #4caf50;
   color: white;
+  margin-right: 10px;
   cursor: pointer;
-  box-shadow: 8px 8px 16px #bebebe, 
-              -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+              
 }
 
 #add-topic-button:hover {
@@ -143,8 +146,8 @@ h2 {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 4px 4px 8px #bebebe, 
-              -4px -4px 8px #ffffff;
+  box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+              
 }
 
 .edit-button {
@@ -168,4 +171,44 @@ h2 {
 .edit-button:active, .delete-button:active {
   transition: all 0.6s ease-in-out, transform 0.2s ease;
   transform: scale(0.95);
+}
+.menu-logo img{
+  display: block;
+  max-width: 85%;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto;
+}
+.menu-container{
+  position: relative;
+  display: inline-block;
+}
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(90deg, rgba(174, 241, 255, 1) 0%, rgba(198, 198, 255, 1) 93%, rgba(186, 182, 255, 2) 100%);
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+.menu-dropdown button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.menu-dropdown button:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-container:hover .menu-dropdown {
+  display: block;
 }
